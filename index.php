@@ -1,10 +1,4 @@
 <?php
-require_once 'includes/functions.php';
+require_once 'routes.php';
 
-if (isLoggedIn()) {
-    redirect('pages/dashboard.php');
- } else {
-    redirect('auth/login.php');
- }
- 
- ?>
+?>

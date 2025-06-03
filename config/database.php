@@ -1,19 +1,19 @@
 <?php
+class Database {
+    private $host = "localhost";
+    private $username = "root";
+    private $password = "";
+    private $database = "medicalRecords";
+    public $conm;
 
-$db_server = "localhost"; 
-$db_username = "root";
-$db_password = "";
-$db_name = "SkillsTest";
+    public function getConnection() {
+        $this->conn = new mysqli($this->host, $this->username, $this->password, $this->database);
 
-try {
-    $conn = mysqli_connect($db_server, $db_username, $db_password, $db_name);
+        if ($this->conn->connect_error) {
+            die("Connection failed: " . $this->conn->connect_error);
+        }
 
-    if(!$conn) {
-        throw new Exception("Connection Failed: " .mysqli_connect_error());
+        return $this->conn;
     }
-
-} catch (Exception $e) {
-    echo "Database not connected" . $e->getMessage();
 }
-
 ?>
