@@ -7,6 +7,6 @@
 </head>
 <body>
     <h1> HOME </h1>
-    <a href = "?page=/patient/patient_dashboard"> PATIENT </a>
+    <a href = "patient_dashboard.php"> PATIENT </a>
 </body>
 </html>

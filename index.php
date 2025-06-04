@@ -1,4 +1,4 @@
 <?php
-require_once 'routes.php';
-
+header("Location: dashboard.php");
+exit();
 ?>
